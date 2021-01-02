@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Ch1</title>
+    <script type="text/javascript" src="./libs/three.js"></script>
+    <style>
+        body {
+            /* set margin to 0 and overflow to hidden, to
+             use the complete page */
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Div which will hold the Output -->
+    <div id="WebGL-output">
+    </div>
+
+    <!-- Javascript code that runs our Three.js examples -->
+    <script type="text/javascript">
+
+        // once everything is loaded, we run our Three.js stuff.
+        function init() {
+            // 创建一个场景
+            var scene = new THREE.Scene();
+            // 创建一个摄像机
+            var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            // 创建一个渲染器
+            var render = new THREE.WebGLRenderer();
+            render.setClearColor(new THREE.Color(0xEEEEEE));
+            render.setSize(window.innerWidth, window.innerHeight);
+        }
+        window.onload = init
+
+    </script>
+</body>
+
+</html>
